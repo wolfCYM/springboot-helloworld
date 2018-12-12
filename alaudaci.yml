@@ -4,6 +4,6 @@ pre_ci_boot:
     tag: "oraclejdk8"
 ci:
     - pwd
-    - mvn -s nexus_settings.xml package -Dmaven.test.skip=true
+    - mvn package -Dmaven.test.skip=true
     - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
     - cp Dockerfile $ALAUDACI_DEST_DIR
